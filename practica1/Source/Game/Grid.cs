@@ -43,9 +43,7 @@ namespace TCGame
         }
         public Object NewRandomItem()
         {
-            Object bomb = new Object();
-            Object heart = new Object();
-            Object sword=new object
+            Random object = new Random();
 
             return Object;
         }
