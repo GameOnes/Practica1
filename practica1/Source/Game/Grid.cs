@@ -41,10 +41,13 @@ namespace TCGame
         {
             get { return NUM_COLUMNS * NUM_ROWS; }
         }
-        public void NewRandomItem()
+        public Object NewRandomItem()
         {
             Object bomb = new Object();
-            Object 
+            Object heart = new Object();
+            Object sword=new object
+
+            return Object;
         }
 
         // 
