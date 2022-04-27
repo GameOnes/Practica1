@@ -41,6 +41,11 @@ namespace TCGame
         {
             get { return NUM_COLUMNS * NUM_ROWS; }
         }
+        public void NewRandomItem()
+        {
+            Object bomb = new Object();
+            Object 
+        }
 
         // 
         // Methods
