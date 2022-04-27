@@ -1,25 +1,31 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\iagoa\\OneDrive\\Desktop\\Practica1\\practica1\\practica1.csproj": {}
+    "C:\\Users\\ACata\\Document\\practica1\\practica1.csproj": {}
   },
   "projects": {
-    "C:\\Users\\iagoa\\OneDrive\\Desktop\\Practica1\\practica1\\practica1.csproj": {
+    "C:\\Users\\ACata\\Document\\practica1\\practica1.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\iagoa\\OneDrive\\Desktop\\Practica1\\practica1\\practica1.csproj",
+        "projectUniqueName": "C:\\Users\\ACata\\Document\\practica1\\practica1.csproj",
         "projectName": "practica1",
-        "projectPath": "C:\\Users\\iagoa\\OneDrive\\Desktop\\Practica1\\practica1\\practica1.csproj",
-        "packagesPath": "C:\\Users\\iagoa\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\iagoa\\OneDrive\\Desktop\\Practica1\\practica1\\obj\\",
+        "projectPath": "C:\\Users\\ACata\\Document\\practica1\\practica1.csproj",
+        "packagesPath": "C:\\Users\\ACata\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\ACata\\Document\\practica1\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\iagoa\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\ACata\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net5.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -58,7 +64,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.407\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.406\\RuntimeIdentifierGraph.json"
         }
       }
     }
