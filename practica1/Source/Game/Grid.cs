@@ -152,9 +152,14 @@ namespace TCGame
 
         private Item NewRandomItem()
         {
-
-            new Random = 
-            List<Item> m_items = m_items.Add(Item);
+            Random Item = new Random();
+            Item.Next(1, 7);
+            switch (Item)
+            {
+                case '1':
+                default:
+                    break;
+            }
             return null;
         }
 
