@@ -41,12 +41,7 @@ namespace TCGame
         {
             get { return NUM_COLUMNS * NUM_ROWS; }
         }
-        public Object NewRandomItem()
-        {
-            Random object = new Random();
-
-            return Object;
-        }
+      
 
         // 
         // Methods
@@ -154,13 +149,21 @@ namespace TCGame
             }
         }
 
+
         private Item NewRandomItem()
         {
+
+            new Random = 
+            List<Item> m_items = m_items.Add(Item);
             return null;
         }
 
         private void RemoveLastItem()
         {
+            if (Keyboard.IsKeyPressed(Keyboard.Key.C))
+            {
+                List<Item> m_items =  ;
+            }
         }
 
         private void NullAllCoins()
@@ -195,6 +198,11 @@ namespace TCGame
 
         private void AddItemAtEnd(Item _item)
         {
+            if (Keyboard.IsKeyPressed(Keyboard.Key.B))
+            {
+                List<Item> m_items = AddItemAtEnd(Item);
+            }
+            
         }
 
         private void OrderItems()
