@@ -13,6 +13,7 @@ namespace TCGame
         public Bomb()
         {
             Texture = texture1;
+            
         }
     }
     public class Heart: Item
@@ -68,4 +69,5 @@ namespace TCGame
             Texture = texture7;
         }
     }
+    
 }
