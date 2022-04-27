@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "dgSpecHash": "TP0yGTDgwK+hh6jVAeg/PRry7oUbybTzOVJnJF7N2zTkSWSCehNjMW3QAVTWKALgKRZZSMnsa2uEqb0EbQQ7pw==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\ACata\\Desktop\\practica1\\practica1.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\ACata\\.nuget\\packages\\csfml\\2.5.0\\csfml.2.5.0.nupkg.sha512",
+    "C:\\Users\\ACata\\.nuget\\packages\\sfml.audio\\2.5.0\\sfml.audio.2.5.0.nupkg.sha512",
+    "C:\\Users\\ACata\\.nuget\\packages\\sfml.graphics\\2.5.0\\sfml.graphics.2.5.0.nupkg.sha512",
+    "C:\\Users\\ACata\\.nuget\\packages\\sfml.net\\2.5.0\\sfml.net.2.5.0.nupkg.sha512",
+    "C:\\Users\\ACata\\.nuget\\packages\\sfml.system\\2.5.0\\sfml.system.2.5.0.nupkg.sha512",
+    "C:\\Users\\ACata\\.nuget\\packages\\sfml.window\\2.5.0\\sfml.window.2.5.0.nupkg.sha512"
+  ],
+  "logs": []
+}
