@@ -1,15 +1,15 @@
 {
   "version": 2,
-  "dgSpecHash": "8mO9UpxwxGlYLZmyYT1rH7RfVjPz0Onm4hXuoXcR2eB3rdf8T1oK88ql6QpRm3mmwVh5KT2asOZWnctJET5YjA==",
+  "dgSpecHash": "aMq6ORsCFzwuCLzsRetFRCYSDlIBAIEal6wh4QNvBYlHW9Mse9QBTpDVIGaB3QUxp8GRHK3wpds62E3TjtYtQA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\ACata\\Document\\practica1\\practica1.csproj",
+  "projectFilePath": "C:\\Users\\iagoa\\OneDrive\\Desktop\\Practica1\\practica1\\practica1.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\ACata\\.nuget\\packages\\csfml\\2.5.0\\csfml.2.5.0.nupkg.sha512",
-    "C:\\Users\\ACata\\.nuget\\packages\\sfml.audio\\2.5.0\\sfml.audio.2.5.0.nupkg.sha512",
-    "C:\\Users\\ACata\\.nuget\\packages\\sfml.graphics\\2.5.0\\sfml.graphics.2.5.0.nupkg.sha512",
-    "C:\\Users\\ACata\\.nuget\\packages\\sfml.net\\2.5.0\\sfml.net.2.5.0.nupkg.sha512",
-    "C:\\Users\\ACata\\.nuget\\packages\\sfml.system\\2.5.0\\sfml.system.2.5.0.nupkg.sha512",
-    "C:\\Users\\ACata\\.nuget\\packages\\sfml.window\\2.5.0\\sfml.window.2.5.0.nupkg.sha512"
+    "C:\\Users\\iagoa\\.nuget\\packages\\csfml\\2.5.0\\csfml.2.5.0.nupkg.sha512",
+    "C:\\Users\\iagoa\\.nuget\\packages\\sfml.audio\\2.5.0\\sfml.audio.2.5.0.nupkg.sha512",
+    "C:\\Users\\iagoa\\.nuget\\packages\\sfml.graphics\\2.5.0\\sfml.graphics.2.5.0.nupkg.sha512",
+    "C:\\Users\\iagoa\\.nuget\\packages\\sfml.net\\2.5.0\\sfml.net.2.5.0.nupkg.sha512",
+    "C:\\Users\\iagoa\\.nuget\\packages\\sfml.system\\2.5.0\\sfml.system.2.5.0.nupkg.sha512",
+    "C:\\Users\\iagoa\\.nuget\\packages\\sfml.window\\2.5.0\\sfml.window.2.5.0.nupkg.sha512"
   ],
   "logs": []
 }
