@@ -22,6 +22,10 @@ namespace TCGame
         public Heart()
         {
             Texture = texture2;
+            Sprite heart = new Sprite();
+            heart.Texture = texture2;
+            heart.Scale = new Vector2f(1.0f, 1.0f);
+            heart.Origin = new Vector2f(0.0f, 0.0f);
         }
     }
     public abstract class  Weapon: Item
@@ -33,7 +37,11 @@ namespace TCGame
         Texture texture3 = new Texture("Data/Textures/Sword.png");
         public Sword()
         {
-            Texture = texture3;
+            Sprite sword = new Sprite();
+            sword.Texture = texture3;
+            sword.Scale = new Vector2f(1.0f,1.0f);
+            sword.Origin = new Vector2f(0.0f, 0.0f);
+            
         }
        
     }
