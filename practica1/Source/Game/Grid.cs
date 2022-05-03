@@ -174,9 +174,12 @@ namespace TCGame
 
         private void NullAllCoins()
         {
+            Vector2f position;
+
             if((Keyboard.IsKeyPressed(Keyboard.Key.Num3)))
             {
-               
+                m_Items.Remove(Coin);
+                position=
             }
         }
 
