@@ -173,6 +173,10 @@ namespace TCGame
 
         private void NullAllCoins()
         {
+            if((Keyboard.IsKeyPressed(Keyboard.Key.Num3)))
+            {
+               
+            }
         }
 
         private void RemoveNullSlots()
@@ -189,11 +193,22 @@ namespace TCGame
 
         private bool HasNullSlot()
         {
+            if(Grid==" ")
+            {
+                return true;
+            }
             return false;
         }
 
         private int GetFirstNullSlot()
         {
+            for (int i = 0; i < m_Items.Count; i++)
+            {
+                if(m_Items[i]==" ")
+                {
+                    return i;
+                }
+            }
             return -1;
         }
 
