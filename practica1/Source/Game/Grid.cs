@@ -156,7 +156,7 @@ namespace TCGame
             Item.Next(1, 7);
             switch (Item)
             {
-                case '1':
+                case 1:
                 default:
                     break;
             }
@@ -182,14 +182,26 @@ namespace TCGame
 
         private void RemoveNullSlots()
         {
+            if (Keyboard.IsKeyPressed(Keyboard.Key.Num5))
+            {
+                m_Items.Remove(m_Items.Count - 1);
+            }
         }
 
         private void RemoveAllItems()
         {
+            if (Keyboard.IsKeyPressed(Keyboard.Key.Num6))
+            {
+                m_Items.Remove(m_Items.Count - 1);
+            }
         }
 
         private void NullAllWeapons()
         {
+            if (Keyboard.IsKeyPressed(Keyboard.Key.Num7))
+            {
+                m_Items.Remove(m_Items.Count - 1);
+            }
         }
 
         private bool HasNullSlot()
@@ -233,6 +245,10 @@ namespace TCGame
 
         private void ReverseItems()
         {
+            if (Keyboard.IsKeyPressed(Keyboard.Key.Num6))
+            {
+                m_Items.Remove(m_Items.Count - 1);
+            }
         }
     }
 }
