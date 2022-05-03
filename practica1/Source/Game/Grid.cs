@@ -161,6 +161,7 @@ namespace TCGame
                     break;
             }
             return null;
+            
         }
 
         private void RemoveLastItem()
