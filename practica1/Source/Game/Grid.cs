@@ -165,9 +165,9 @@ namespace TCGame
 
         private void RemoveLastItem()
         {
-            if (Keyboard.IsKeyPressed(Keyboard.Key.C))
+            if (Keyboard.IsKeyPressed(Keyboard.Key.Num2))
             {
-                List<Item> m_items =  ;
+                m_Items.Remove(m_Items.Count - 1);
             }
         }
 
@@ -203,10 +203,11 @@ namespace TCGame
 
         private void AddItemAtEnd(Item _item)
         {
-            if (Keyboard.IsKeyPressed(Keyboard.Key.B))
+            if (Keyboard.IsKeyPressed(Keyboard.Key.Num1))
             {
-                List<Item> m_items = AddItemAtEnd(Item);
+                m_Items.Insert(m_Items.Count - 1, _item);
             }
+           
             
         }
 
