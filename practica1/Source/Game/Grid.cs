@@ -168,15 +168,16 @@ namespace TCGame
         {
             if (Keyboard.IsKeyPressed(Keyboard.Key.Num2))
             {
-                m_Items.Remove(m_Items.Count - 1);
+                m_Items.RemoveAt(m_Items.Count - 1);
             }
         }
 
         private void NullAllCoins()
         {
             Vector2f position;
+            position = Coin;
 
-            if((Keyboard.IsKeyPressed(Keyboard.Key.Num3)))
+            if(Keyboard.IsKeyPressed(Keyboard.Key.Num3))
             {
                 m_Items.Remove(Coin);
                 position=
@@ -209,7 +210,7 @@ namespace TCGame
 
         private bool HasNullSlot()
         {
-            if(Grid==" ")
+            if(==" ")
             {
                 return true;
             }
@@ -220,16 +221,21 @@ namespace TCGame
         {
             for (int i = 0; i < m_Items.Count; i++)
             {
-                if(m_Items[i]==" ")
+                if (m_Items[i] == null)
                 {
                     return i;
                 }
             }
+            
             return -1;
         }
 
         private void AddItemAtIndex(Item _item, int _index)
         {
+            if (Keyboard.IsKeyPressed(Keyboard.Key.Num3))
+            {
+
+            }
         }
 
         private void AddItemAtEnd(Item _item)
@@ -250,7 +256,7 @@ namespace TCGame
         {
             if (Keyboard.IsKeyPressed(Keyboard.Key.Num6))
             {
-                m_Items.Remove(m_Items.Count - 1);
+                m_Items.Reverse();
             }
         }
     }
