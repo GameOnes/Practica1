@@ -154,7 +154,7 @@ namespace TCGame
         {
             Random Item = new Random();
             Item.Next(1, 7);
-            switch (Item)
+            switch (m_Items)
             {
                 case 1:
                 default:
