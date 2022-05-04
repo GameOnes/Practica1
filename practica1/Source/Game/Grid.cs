@@ -174,13 +174,16 @@ namespace TCGame
 
         private void NullAllCoins()
         {
-            Vector2f position;
-            position = Coin;
+         
 
             if(Keyboard.IsKeyPressed(Keyboard.Key.Num3))
             {
-                m_Items.Remove(Coin);
-                position=
+                for (int i = 0; i < m_Items.Count; i++)
+                {
+                    if(m_Items[i].Contains());
+                }
+                
+                
             }
         }
 
