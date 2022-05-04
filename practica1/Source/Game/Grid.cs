@@ -149,12 +149,14 @@ namespace TCGame
             }
         }
 
-
+        
         private Item NewRandomItem()
         {
             Random Item = new Random();
+            List<char>item= new List<char>(12);
             Item.Next(1, 7);
-            switch (m_Items)
+           
+            switch (item)
             {
                 case 1:
                 default:
@@ -174,16 +176,12 @@ namespace TCGame
 
         private void NullAllCoins()
         {
-         
-
             if(Keyboard.IsKeyPressed(Keyboard.Key.Num3))
             {
                 for (int i = 0; i < m_Items.Count; i++)
                 {
                     if(m_Items[i].Contains());
                 }
-                
-                
             }
         }
 
@@ -191,7 +189,13 @@ namespace TCGame
         {
             if (Keyboard.IsKeyPressed(Keyboard.Key.Num5))
             {
-                
+                for (int i = 0; i < m_Items.Count; i++)
+                {
+                    if (m_Items[i] == null)
+                    {
+                        m_Items.Remove(m_Items[i]);
+                    }
+                }
             }
         }
 
@@ -219,7 +223,6 @@ namespace TCGame
                 {
                     return true;
                 }
-               
             }
             return false;
         }
@@ -241,7 +244,7 @@ namespace TCGame
         {
             if (Keyboard.IsKeyPressed(Keyboard.Key.Num3))
             {
-
+                m_Items.Insert(_index, _item);
             }
         }
 
@@ -259,7 +262,7 @@ namespace TCGame
         {
             if (Keyboard.IsKeyPressed(Keyboard.Key.Num8))
             {
-                    
+              
             }
         }
 

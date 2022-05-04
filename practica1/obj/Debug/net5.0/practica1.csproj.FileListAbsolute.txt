@@ -1,0 +1,5 @@
+C:\Users\iagoa\OneDrive\Desktop\TECNOCAMPUS\3T\3T Programacio II\Codigos profe\Practica1\practica1\obj\Debug\net5.0\practica1.csproj.AssemblyReference.cache
+C:\Users\iagoa\OneDrive\Desktop\TECNOCAMPUS\3T\3T Programacio II\Codigos profe\Practica1\practica1\obj\Debug\net5.0\practica1.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\iagoa\OneDrive\Desktop\TECNOCAMPUS\3T\3T Programacio II\Codigos profe\Practica1\practica1\obj\Debug\net5.0\practica1.AssemblyInfoInputs.cache
+C:\Users\iagoa\OneDrive\Desktop\TECNOCAMPUS\3T\3T Programacio II\Codigos profe\Practica1\practica1\obj\Debug\net5.0\practica1.AssemblyInfo.cs
+C:\Users\iagoa\OneDrive\Desktop\TECNOCAMPUS\3T\3T Programacio II\Codigos profe\Practica1\practica1\obj\Debug\net5.0\practica1.csproj.CoreCompileInputs.cache
