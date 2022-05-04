@@ -236,7 +236,6 @@ namespace TCGame
                     return i;
                 }
             }
-            
             return -1;
         }
 
