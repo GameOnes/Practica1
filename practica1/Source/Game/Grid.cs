@@ -188,7 +188,7 @@ namespace TCGame
         {
             if (Keyboard.IsKeyPressed(Keyboard.Key.Num5))
             {
-                m_Items.Remove(m_Items.Count - 1);
+                
             }
         }
 
@@ -196,7 +196,7 @@ namespace TCGame
         {
             if (Keyboard.IsKeyPressed(Keyboard.Key.Num6))
             {
-                m_Items.Remove(m_Items.Count - 1);
+                m_Items.Clear();
             }
         }
 
@@ -204,15 +204,19 @@ namespace TCGame
         {
             if (Keyboard.IsKeyPressed(Keyboard.Key.Num7))
             {
-                m_Items.Remove(m_Items.Count - 1);
+               
             }
         }
 
         private bool HasNullSlot()
         {
-            if(==" ")
+            for (int i = 0; i < m_Items.Count; i++)
             {
-                return true;
+                if (m_Items[i]==null)
+                {
+                    return true;
+                }
+               
             }
             return false;
         }
@@ -250,6 +254,10 @@ namespace TCGame
 
         private void OrderItems()
         {
+            if (Keyboard.IsKeyPressed(Keyboard.Key.Num8))
+            {
+                    
+            }
         }
 
         private void ReverseItems()
