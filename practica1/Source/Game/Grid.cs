@@ -171,7 +171,7 @@ namespace TCGame
 
         private void NullAllCoins()
         {
-            /*Item coin = new Coin();
+            Item coin = new Coin();
             for (int i = 0; i < m_Items.Count; i++)
             {
                 if (m_Items[i] == coin)
@@ -180,14 +180,8 @@ namespace TCGame
                    m_Items[i] = null;
                 }
             }
-            */
-            Item coin = new Coin();
-            while (m_Items.Find())
-            {
-                int index = m_Items.IndexOf(coin);
-                m_Items.RemoveAt(index);
-                m_Items.Insert(index, null);
-            }
+            
+            
         }
 
         private void RemoveNullSlots()
