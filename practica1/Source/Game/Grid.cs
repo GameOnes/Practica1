@@ -41,7 +41,7 @@ namespace TCGame
         {
             get { return NUM_COLUMNS * NUM_ROWS; }
         }
-      
+
 
         // 
         // Methods
@@ -74,31 +74,31 @@ namespace TCGame
                     AddItemAtEnd(NewRandomItem());
                 }
             }
-            else if (_keyEvent.Code == Keyboard.Key.R)
+            else if (_keyEvent.Code == Keyboard.Key.Num2)
             {
                 RemoveLastItem();
             }
-            else if (_keyEvent.Code == Keyboard.Key.N)
+            else if (_keyEvent.Code == Keyboard.Key.Num3)
             {
                 NullAllCoins();
             }
-            else if (_keyEvent.Code == Keyboard.Key.V)
+            else if (_keyEvent.Code == Keyboard.Key.Num4)
             {
                 ReverseItems();
             }
-            else if (_keyEvent.Code == Keyboard.Key.S)
+            else if (_keyEvent.Code == Keyboard.Key.Num5)
             {
                 RemoveNullSlots();
             }
-            else if (_keyEvent.Code == Keyboard.Key.M)
+            else if (_keyEvent.Code == Keyboard.Key.Num6)
             {
                 RemoveAllItems();
             }
-            else if (_keyEvent.Code == Keyboard.Key.K)
+            else if (_keyEvent.Code == Keyboard.Key.Num7)
             {
                 NullAllWeapons();
             }
-            else if (_keyEvent.Code == Keyboard.Key.O)
+            else if (_keyEvent.Code == Keyboard.Key.Num8)
             {
                 OrderItems();
             }
@@ -149,7 +149,7 @@ namespace TCGame
             }
         }
 
-        
+
         private Item NewRandomItem()
         {
             Random alea = new Random();
@@ -160,58 +160,53 @@ namespace TCGame
 
         private void RemoveLastItem()
         {
-            if (Keyboard.IsKeyPressed(Keyboard.Key.Num2))
-            {
-                m_Items.RemoveAt(m_Items.Count - 1);
-            }
+            m_Items.RemoveAt(m_Items.Count - 1);
+
         }
 
         private void NullAllCoins()
         {
-            if(Keyboard.IsKeyPressed(Keyboard.Key.Num3))
+            Item coin = new Coin();
+            for (int i = 0; i < m_Items.Count; i++)
             {
-                for (int i = 0; i < m_Items.Count; i++)
+                if (m_Items[i] == coin)
                 {
-                    if(m_Items[i].Contains());
+                   m_Items.Remove(m_Items[i]);
+                   m_Items[i] = null;
                 }
             }
+
+            
         }
 
         private void RemoveNullSlots()
         {
-            if (Keyboard.IsKeyPressed(Keyboard.Key.Num5))
+            for (int i = 0; i < m_Items.Count; i++)
             {
-                for (int i = 0; i < m_Items.Count; i++)
+                if (m_Items[i] == null)
                 {
-                    if (m_Items[i] == null)
-                    {
-                        m_Items.Remove(m_Items[i]);
-                    }
+                    m_Items.Remove(m_Items[i]);
                 }
             }
+
         }
 
         private void RemoveAllItems()
         {
-            if (Keyboard.IsKeyPressed(Keyboard.Key.Num6))
-            {
-                m_Items.Clear();
-            }
+            m_Items.Clear();
+
         }
 
         private void NullAllWeapons()
         {
-            if (Keyboard.IsKeyPressed(Keyboard.Key.Num7))
-            {
-               
-            }
+
         }
 
         private bool HasNullSlot()
         {
             for (int i = 0; i < m_Items.Count; i++)
             {
-                if (m_Items[i]==null)
+                if (m_Items[i] == null)
                 {
                     return true;
                 }
@@ -233,36 +228,57 @@ namespace TCGame
 
         private void AddItemAtIndex(Item _item, int _index)
         {
-            if (Keyboard.IsKeyPressed(Keyboard.Key.Num3))
-            {
-                m_Items.Insert(_index, _item);
-            }
+            m_Items.Insert(_index, _item);
+
         }
 
         private void AddItemAtEnd(Item _item)
         {
-            if (Keyboard.IsKeyPressed(Keyboard.Key.Num1))
-            {
-                m_Items.Insert(m_Items.Count - 1, _item);
-            }
-           
-            
+            m_Items.Insert(m_Items.Count - 1, _item);
         }
 
         private void OrderItems()
         {
-            if (Keyboard.IsKeyPressed(Keyboard.Key.Num8))
+            int Heart, Sword, Axe, Bomb, Coin, Clyde, Blinky;
+
+
+
+            for (int i = 0; i < m_Items.Count; i++)
             {
-              
+                if (m_Items[i] == new Heart())
+                {
+                    
+                }
+                else if (m_Items[i] == new Sword())
+                {
+
+                }
+                else if(m_Items[i]== new Axe())
+                {
+
+                }
+                else if (m_Items[i] == new Bomb())
+                {
+
+                }
+                else if(m_Items[i]== new Coin())
+                {
+
+                }
+                else if(m_Items[i]== new Clyde())
+                {
+
+                }
+                else
+                {
+
+                }
             }
         }
 
         private void ReverseItems()
         {
-            if (Keyboard.IsKeyPressed(Keyboard.Key.Num6))
-            {
-                m_Items.Reverse();
-            }
+            m_Items.Reverse();
         }
     }
 }
