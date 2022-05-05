@@ -63,45 +63,48 @@ namespace TCGame
         
         public void HandleKeyPressed(object _sender, KeyEventArgs _keyEvent)
         {
-            if (_keyEvent.Code == Keyboard.Key.Num1)
-            {
-                if (HasNullSlot())
+            
+            
+                if (_keyEvent.Code == Keyboard.Key.Num1)
                 {
-                    AddItemAtIndex(NewRandomItem(), GetFirstNullSlot());
+                    if (HasNullSlot())
+                    {
+                        AddItemAtIndex(NewRandomItem(), GetFirstNullSlot());
+                    }
+                    else
+                    {
+                        AddItemAtEnd(NewRandomItem());
+                    }
                 }
-                else
+                else if (_keyEvent.Code == Keyboard.Key.Num2)
                 {
-                    AddItemAtEnd(NewRandomItem());
+                    RemoveLastItem();
                 }
-            }
-            else if (_keyEvent.Code == Keyboard.Key.Num2)
-            {
-                RemoveLastItem();
-            }
-            else if (_keyEvent.Code == Keyboard.Key.Num3)
-            {
-                NullAllCoins();
-            }
-            else if (_keyEvent.Code == Keyboard.Key.Num4)
-            {
-                ReverseItems();
-            }
-            else if (_keyEvent.Code == Keyboard.Key.Num5)
-            {
-                RemoveNullSlots();
-            }
-            else if (_keyEvent.Code == Keyboard.Key.Num6)
-            {
-                RemoveAllItems();
-            }
-            else if (_keyEvent.Code == Keyboard.Key.Num7)
-            {
-                NullAllWeapons();
-            }
-            else if (_keyEvent.Code == Keyboard.Key.Num8)
-            {
-                OrderItems();
-            }
+                else if (_keyEvent.Code == Keyboard.Key.Num3)
+                {
+                    NullAllCoins();
+                }
+                else if (_keyEvent.Code == Keyboard.Key.Num4)
+                {
+                    ReverseItems();
+                }
+                else if (_keyEvent.Code == Keyboard.Key.Num5)
+                {
+                    RemoveNullSlots();
+                }
+                else if (_keyEvent.Code == Keyboard.Key.Num6)
+                {
+                    RemoveAllItems();
+                }
+                else if (_keyEvent.Code == Keyboard.Key.Num7)
+                {
+                    NullAllWeapons();
+                }
+                else if (_keyEvent.Code == Keyboard.Key.Num8)
+                {
+                    OrderItems();
+                }
+            
         }
 
         private void FillGridLines()
@@ -155,18 +158,20 @@ namespace TCGame
             Random alea = new Random();
             List<Item> itemslist = new List<Item> { new Bomb(), new Heart(), new Sword(), new Axe(), new Coin(), new Clyde(), new Blinky() };
 
-            return itemslist[alea.Next(1, itemslist.Count)];
+            return itemslist[alea.Next(0, itemslist.Count)];
         }
 
         private void RemoveLastItem()
         {
-            m_Items.RemoveAt(m_Items.Count-1 );
-
+            if (m_Items.Count > 0)
+            {
+                m_Items.RemoveAt(m_Items.Count - 1);
+            }
         }
 
         private void NullAllCoins()
         {
-            Item coin = new Coin();
+            /*Item coin = new Coin();
             for (int i = 0; i < m_Items.Count; i++)
             {
                 if (m_Items[i] == coin)
@@ -175,8 +180,14 @@ namespace TCGame
                    m_Items[i] = null;
                 }
             }
-
-            
+            */
+            Item coin = new Coin();
+            while (m_Items.Find())
+            {
+                int index = m_Items.IndexOf(coin);
+                m_Items.RemoveAt(index);
+                m_Items.Insert(index, null);
+            }
         }
 
         private void RemoveNullSlots()
@@ -194,7 +205,6 @@ namespace TCGame
         private void RemoveAllItems()
         {
             m_Items.Clear();
-
         }
 
         private void NullAllWeapons()
@@ -237,14 +247,20 @@ namespace TCGame
 
         private void AddItemAtIndex(Item _item, int _index)
         {
-            m_Items.Insert(_index, _item);
-
+            if (m_Items.Count < 12)
+            {
+                m_Items.Insert(_index, _item);
+            }
         }
 
         private void AddItemAtEnd(Item _item)
         {
-            m_Items.Insert(m_Items.Count , _item);
+            if (m_Items.Count < 12)
+            {
+                m_Items.Insert(m_Items.Count, _item);
+            }
         }
+        
 
         private void OrderItems()
         {

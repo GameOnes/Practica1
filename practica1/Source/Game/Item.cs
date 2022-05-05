@@ -13,7 +13,7 @@ namespace TCGame
         public Bomb()
         {
             Texture = texture1;
-            Origin = new Vector2f(0.0f, 0.0f);
+            Origin = new Vector2f(5.0f, 5.0f);
 
         }
     }
