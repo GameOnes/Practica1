@@ -60,10 +60,10 @@ namespace TCGame
         {
             m_BackgroundTexture.Dispose();
         }
-
+        
         public void HandleKeyPressed(object _sender, KeyEventArgs _keyEvent)
         {
-            if (_keyEvent.Code == Keyboard.Key.A)
+            if (_keyEvent.Code == Keyboard.Key.Num1)
             {
                 if (HasNullSlot())
                 {
@@ -160,7 +160,7 @@ namespace TCGame
 
         private void RemoveLastItem()
         {
-            m_Items.RemoveAt(m_Items.Count - 1);
+            m_Items.RemoveAt(m_Items.Count-1 );
 
         }
 
@@ -199,7 +199,16 @@ namespace TCGame
 
         private void NullAllWeapons()
         {
-
+            Weapon sword = new Sword();
+            Weapon axe = new Axe();
+            for (int i = 0; i < m_Items.Count; i++)
+            {
+                if (m_Items[i] == sword || m_Items[i]==axe)
+                {
+                    m_Items.Remove(m_Items[i]);
+                    m_Items[i] = null;
+                }
+            }
         }
 
         private bool HasNullSlot()
@@ -234,7 +243,7 @@ namespace TCGame
 
         private void AddItemAtEnd(Item _item)
         {
-            m_Items.Insert(m_Items.Count - 1, _item);
+            m_Items.Insert(m_Items.Count , _item);
         }
 
         private void OrderItems()
