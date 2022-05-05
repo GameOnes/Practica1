@@ -13,7 +13,7 @@ namespace TCGame
         public Bomb()
         {
             Texture = texture1;
-            Origin = new Vector2f(5.0f, 5.0f);
+            Origin = new Vector2f(50.0f, 60.0f);
 
         }
     }
@@ -23,7 +23,7 @@ namespace TCGame
         public Heart()
         {
             Texture = texture2;
-            Origin = new Vector2f(0.0f, 0.0f);
+            Origin = new Vector2f(60.0f, 50.0f);
         }
     }
     public abstract class  Weapon: Item
@@ -36,7 +36,7 @@ namespace TCGame
         public Sword()
         {
             Texture = texture3;
-            Origin = new Vector2f(0.0f,0.0f);
+            Origin = new Vector2f(50.0f,50.0f);
         }
        
     }
@@ -46,7 +46,7 @@ namespace TCGame
         public Axe()
         {
             Texture =texture4;
-            Origin = new Vector2f(0.0f, 0.0f);
+            Origin = new Vector2f(50.0f, 50.0f);
         }
     }
     public class Coin: Item
@@ -55,7 +55,7 @@ namespace TCGame
         public Coin()
         {
             Texture = texture5;
-            Origin = new Vector2f(0.0f, 0.0f);
+            Origin = new Vector2f(50.0f, 50.0f);
         }
     }
     public class Clyde: Item
@@ -64,7 +64,7 @@ namespace TCGame
         public Clyde()
         {
             Texture = texture6;
-            Origin = new Vector2f(0.0f, 0.0f);
+            Origin = new Vector2f(60.0f, 50.0f);
         }
     }
     public class Blinky : Item
@@ -73,7 +73,7 @@ namespace TCGame
         public Blinky()
         {
             Texture = texture7;
-            Origin = new Vector2f(0.0f, 0.0f);
+            Origin = new Vector2f(40.0f, 50.0f);
         }
     }
     

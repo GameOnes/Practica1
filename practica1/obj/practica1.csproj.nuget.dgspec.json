@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\iagoa\\OneDrive\\Desktop\\TECNOCAMPUS\\3T\\3T Programacio II\\Codigos profe\\Practica1\\practica1\\practica1.csproj": {}
+    "C:\\Users\\ACata\\Documents\\GitHub\\Practic\\practica1\\practica1.csproj": {}
   },
   "projects": {
-    "C:\\Users\\iagoa\\OneDrive\\Desktop\\TECNOCAMPUS\\3T\\3T Programacio II\\Codigos profe\\Practica1\\practica1\\practica1.csproj": {
+    "C:\\Users\\ACata\\Documents\\GitHub\\Practic\\practica1\\practica1.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\iagoa\\OneDrive\\Desktop\\TECNOCAMPUS\\3T\\3T Programacio II\\Codigos profe\\Practica1\\practica1\\practica1.csproj",
+        "projectUniqueName": "C:\\Users\\ACata\\Documents\\GitHub\\Practic\\practica1\\practica1.csproj",
         "projectName": "practica1",
-        "projectPath": "C:\\Users\\iagoa\\OneDrive\\Desktop\\TECNOCAMPUS\\3T\\3T Programacio II\\Codigos profe\\Practica1\\practica1\\practica1.csproj",
-        "packagesPath": "C:\\Users\\iagoa\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\iagoa\\OneDrive\\Desktop\\TECNOCAMPUS\\3T\\3T Programacio II\\Codigos profe\\Practica1\\practica1\\obj\\",
+        "projectPath": "C:\\Users\\ACata\\Documents\\GitHub\\Practic\\practica1\\practica1.csproj",
+        "packagesPath": "C:\\Users\\ACata\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\ACata\\Documents\\GitHub\\Practic\\practica1\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\iagoa\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\ACata\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net5.0"
@@ -58,7 +58,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.407\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.402\\RuntimeIdentifierGraph.json"
         }
       }
     }
