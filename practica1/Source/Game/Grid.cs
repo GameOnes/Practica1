@@ -152,18 +152,10 @@ namespace TCGame
         
         private Item NewRandomItem()
         {
-            Random Item = new Random();
-            List<char>item= new List<char>(12);
-            Item.Next(1, 7);
-           
-            switch (item)
-            {
-                case 1:
-                default:
-                    break;
-            }
-            return null;
-            
+            Random alea = new Random();
+            List<Item> itemslist = new List<Item> { new Bomb(), new Heart(), new Sword(), new Axe(), new Coin(), new Clyde(), new Blinky() };
+
+            return itemslist[alea.Next(1, itemslist.Count)];
         }
 
         private void RemoveLastItem()
