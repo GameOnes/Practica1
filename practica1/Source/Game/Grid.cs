@@ -61,7 +61,7 @@ namespace TCGame
             m_BackgroundTexture.Dispose();
         }
         
-        public void HandleKeyPressed(object _sender, KeyEventArgs _keyEvent)
+        public void HandleKeyPressed(object _sender, KeyEventArgs _keyEvent,MouseButtonEvent _mouseEvent)
         {
             
             
@@ -103,6 +103,10 @@ namespace TCGame
                 else if (_keyEvent.Code == Keyboard.Key.Num8)
                 {
                     OrderItems();
+                }
+                else if (_mouseEvent.Button==Mouse.Button.Right)
+                {
+                    
                 }
             
         }
@@ -174,15 +178,32 @@ namespace TCGame
             Item coin = new Coin();
             for (int i = 0; i < m_Items.Count; i++)
             {
-                if (m_Items[i] == coin)
+                /*if (m_Items[i] == coin)
                 {
                    m_Items.Remove(m_Items[i]);
                    m_Items[i] = null;
+                }*/
+                if (m_Items[i].GetType() == coin.GetType())
+                {
+                    int index = m_Items.IndexOf(m_Items[i]);
+                    m_Items[index] = null;
                 }
             }
             
             
         }
+        /*private void NullAllCoins()
+        {
+            foreach (Item a in m_Items)
+            {
+                Item coin = new Coin();
+                if (a.GetType() == coin.GetType())
+                {
+                    int index = m_Items.IndexOf(a);
+                    m_Items[index] = null;
+                }
+            }
+        }*/
 
         private void RemoveNullSlots()
         {
