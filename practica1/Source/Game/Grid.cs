@@ -106,7 +106,7 @@ namespace TCGame
                 }
                 else if (_mouseEvent.Button==Mouse.Button.Right)
                 {
-                    
+                    NullClickedObjects();
                 }
             
         }
@@ -216,6 +216,14 @@ namespace TCGame
             }
 
         }
+        private void NullClickedObjects()
+        {
+            
+            for (int i = 0; i < 1; i++)
+            {
+                m_Items.Remove(m_Items[i]);
+            }
+        }
 
         private void RemoveAllItems()
         {
@@ -226,12 +234,26 @@ namespace TCGame
         {
             Weapon sword = new Sword();
             Weapon axe = new Axe();
+            /*for (int i = 0; i < m_Items.Count; i++)
+              {
+                  if (m_Items[i] == sword || m_Items[i]==axe)
+                  {
+                      m_Items.Remove(m_Items[i]);
+                      m_Items[i] = null;
+                  }
+              }
+            */
             for (int i = 0; i < m_Items.Count; i++)
             {
-                if (m_Items[i] == sword || m_Items[i]==axe)
+                if (m_Items[i].GetType() == axe.GetType())
                 {
-                    m_Items.Remove(m_Items[i]);
-                    m_Items[i] = null;
+                    int index = m_Items.IndexOf(m_Items[i]);
+                    m_Items[index] = null;
+                }
+                else if ((m_Items[i].GetType() == sword.GetType()))
+                {
+                    int index = m_Items.IndexOf(m_Items[i]);
+                    m_Items[index] = null;
                 }
             }
         }
