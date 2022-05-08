@@ -61,7 +61,7 @@ namespace TCGame
             m_BackgroundTexture.Dispose();
         }
         
-        public void HandleKeyPressed(object _sender, KeyEventArgs _keyEvent)
+        public void HandleKeyPressed(object _sender, KeyEventArgs _keyEvent,MouseButtonEvent _mouseEvent)
         {
             
             
@@ -103,6 +103,14 @@ namespace TCGame
                 else if (_keyEvent.Code == Keyboard.Key.Num8)
                 {
                     OrderItems();
+                }
+                else if(_mouseEvent.Button == Mouse.Button.Right)
+                {
+                 bool clicked = true;
+                    if (clicked)
+                    {
+                      NullClickedObjects();
+                    }
                 }
             
         }
@@ -182,6 +190,17 @@ namespace TCGame
             }
             
             
+        }
+        private void NullClickedObjects()
+        {
+
+                for (int i = 0; i < m_Items.Count; i++)
+                {
+                    m_Items.Remove(m_Items[i]);
+                }
+            
+
+
         }
 
         private void RemoveNullSlots()
