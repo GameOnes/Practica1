@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "GoZpWNSoqAHZrZB9aVtN+WYj6jVqAfSFcYA5KE2hZQRSB4V6OtKmxIJRLu5HOvI09dfppB/usiw8msYjk+N5nw==",
+  "dgSpecHash": "aMq6ORsCFzwuCLzsRetFRCYSDlIBAIEal6wh4QNvBYlHW9Mse9QBTpDVIGaB3QUxp8GRHK3wpds62E3TjtYtQA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\iagoa\\OneDrive\\Desktop\\TECNOCAMPUS\\3T\\3T Programacio II\\Codigos profe\\Practica1\\practica1\\practica1.csproj",
+  "projectFilePath": "C:\\Users\\iagoa\\OneDrive\\Desktop\\Practica1\\practica1\\practica1.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\iagoa\\.nuget\\packages\\csfml\\2.5.0\\csfml.2.5.0.nupkg.sha512",
     "C:\\Users\\iagoa\\.nuget\\packages\\sfml.audio\\2.5.0\\sfml.audio.2.5.0.nupkg.sha512",

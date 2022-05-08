@@ -104,13 +104,9 @@ namespace TCGame
                 {
                     OrderItems();
                 }
-                else if(_mouseEvent.Button == Mouse.Button.Right)
+                else if (_mouseEvent.Button==Mouse.Button.Right)
                 {
-                 bool clicked = true;
-                    if (clicked)
-                    {
-                      NullClickedObjects();
-                    }
+                    NullClickedObjects();
                 }
             
         }
@@ -182,26 +178,32 @@ namespace TCGame
             Item coin = new Coin();
             for (int i = 0; i < m_Items.Count; i++)
             {
-                if (m_Items[i] == coin)
+                /*if (m_Items[i] == coin)
                 {
                    m_Items.Remove(m_Items[i]);
                    m_Items[i] = null;
+                }*/
+                if (m_Items[i].GetType() == coin.GetType())
+                {
+                    int index = m_Items.IndexOf(m_Items[i]);
+                    m_Items[index] = null;
                 }
             }
             
             
         }
-        private void NullClickedObjects()
+        /*private void NullAllCoins()
         {
-
-                for (int i = 0; i < m_Items.Count; i++)
+            foreach (Item a in m_Items)
+            {
+                Item coin = new Coin();
+                if (a.GetType() == coin.GetType())
                 {
-                    m_Items.Remove(m_Items[i]);
+                    int index = m_Items.IndexOf(a);
+                    m_Items[index] = null;
                 }
-            
-
-
-        }
+            }
+        }*/
 
         private void RemoveNullSlots()
         {
@@ -214,6 +216,14 @@ namespace TCGame
             }
 
         }
+        private void NullClickedObjects()
+        {
+            
+            for (int i = 0; i < 1; i++)
+            {
+                m_Items.Remove(m_Items[i]);
+            }
+        }
 
         private void RemoveAllItems()
         {
@@ -224,12 +234,26 @@ namespace TCGame
         {
             Weapon sword = new Sword();
             Weapon axe = new Axe();
+            /*for (int i = 0; i < m_Items.Count; i++)
+              {
+                  if (m_Items[i] == sword || m_Items[i]==axe)
+                  {
+                      m_Items.Remove(m_Items[i]);
+                      m_Items[i] = null;
+                  }
+              }
+            */
             for (int i = 0; i < m_Items.Count; i++)
             {
-                if (m_Items[i] == sword || m_Items[i]==axe)
+                if (m_Items[i].GetType() == axe.GetType())
                 {
-                    m_Items.Remove(m_Items[i]);
-                    m_Items[i] = null;
+                    int index = m_Items.IndexOf(m_Items[i]);
+                    m_Items[index] = null;
+                }
+                else if ((m_Items[i].GetType() == sword.GetType()))
+                {
+                    int index = m_Items.IndexOf(m_Items[i]);
+                    m_Items[index] = null;
                 }
             }
         }
