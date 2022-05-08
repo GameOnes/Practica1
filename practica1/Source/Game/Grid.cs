@@ -63,53 +63,65 @@ namespace TCGame
         
         public void HandleKeyPressed(object _sender, KeyEventArgs _keyEvent,MouseButtonEvent _mouseEvent)
         {
-            
-            
-                if (_keyEvent.Code == Keyboard.Key.Num1)
+
+
+            if (_keyEvent.Code == Keyboard.Key.Num1)
+            {
+                if (HasNullSlot())
                 {
-                    if (HasNullSlot())
+                    AddItemAtIndex(NewRandomItem(), GetFirstNullSlot());
+                }
+                else
+                {
+                    AddItemAtEnd(NewRandomItem());
+                }
+            }
+            else if (_keyEvent.Code == Keyboard.Key.Num2)
+            {
+                RemoveLastItem();
+            }
+            else if (_keyEvent.Code == Keyboard.Key.Num3)
+            {
+                NullAllCoins();
+            }
+            else if (_keyEvent.Code == Keyboard.Key.Num4)
+            {
+                ReverseItems();
+            }
+            else if (_keyEvent.Code == Keyboard.Key.Num5)
+            {
+                RemoveNullSlots();
+            }
+            else if (_keyEvent.Code == Keyboard.Key.Num6)
+            {
+                RemoveAllItems();
+            }
+            else if (_keyEvent.Code == Keyboard.Key.Num7)
+            {
+                NullAllWeapons();
+            }
+            else if (_keyEvent.Code == Keyboard.Key.Num8)
+            {
+                OrderItems();
+            }
+            else if (_mouseEvent.Button == Mouse.Button.Right)
+            {
+                Item bomb = new Bomb();
+                for (int i = 0; i < m_Items.Count; i++)
+                {
+                    if (m_Items[i]==bomb)
                     {
-                        AddItemAtIndex(NewRandomItem(), GetFirstNullSlot());
+                        ClickedBomb();
                     }
                     else
                     {
-                        AddItemAtEnd(NewRandomItem());
+                        NullClickedObjects();
                     }
-                }
-                else if (_keyEvent.Code == Keyboard.Key.Num2)
-                {
-                    RemoveLastItem();
-                }
-                else if (_keyEvent.Code == Keyboard.Key.Num3)
-                {
-                    NullAllCoins();
-                }
-                else if (_keyEvent.Code == Keyboard.Key.Num4)
-                {
-                    ReverseItems();
-                }
-                else if (_keyEvent.Code == Keyboard.Key.Num5)
-                {
-                    RemoveNullSlots();
-                }
-                else if (_keyEvent.Code == Keyboard.Key.Num6)
-                {
-                    RemoveAllItems();
-                }
-                else if (_keyEvent.Code == Keyboard.Key.Num7)
-                {
-                    NullAllWeapons();
-                }
-                else if (_keyEvent.Code == Keyboard.Key.Num8)
-                {
-                    OrderItems();
-                }
-                else if (_mouseEvent.Button==Mouse.Button.Right)
-                {
-                   
-                    
+
+
 
                 }
+            }
             
         }
 
@@ -188,7 +200,7 @@ namespace TCGame
                 if (m_Items[i].GetType() == coin.GetType())
                 {
                     int index = m_Items.IndexOf(m_Items[i]);
-                    m_Items[index] = null;
+                    m_Items.Remove(coin);
                 }
             }
             
@@ -221,7 +233,7 @@ namespace TCGame
         private void NullClickedObjects()
         {
             
-            for (int i = 0; i < 1; i++)
+            for (int i = 0; i < m_Items.Count; i++)
             {
                 m_Items.Remove(m_Items[i]);
             }
@@ -233,7 +245,15 @@ namespace TCGame
         }
         private void ClickedBomb()
         {
+            Item bomb = new Bomb();
 
+            for (int i = 0; i < m_Items.Count; i++)
+            {
+                if (m_Items[i].GetType() == bomb.GetType())
+                {
+                    m_Items.Remove( bomb);
+                }
+            }
         }
         private void NullAllWeapons()
         {
@@ -306,7 +326,7 @@ namespace TCGame
 
         private void OrderItems()
         {
-             
+            m_Items.Clear();
              Item heart = new Heart();
              Item bomb = new Bomb();
              Item coin = new Coin();
