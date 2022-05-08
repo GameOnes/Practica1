@@ -192,14 +192,9 @@ namespace TCGame
             Item coin = new Coin();
             for (int i = 0; i < m_Items.Count; i++)
             {
-                /*if (m_Items[i] == coin)
-                {
-                   m_Items.Remove(m_Items[i]);
-                   m_Items[i] = null;
-                }*/
+                
                 if (m_Items[i].GetType() == coin.GetType())
                 {
-                    int index = m_Items.IndexOf(m_Items[i]);
                     m_Items.Remove(coin);
                 }
             }
@@ -257,8 +252,8 @@ namespace TCGame
         }
         private void NullAllWeapons()
         {
-            Weapon sword = new Sword();
-            Weapon axe = new Axe();
+            Item sword = new Sword();
+            Item axe = new Axe();
             /*for (int i = 0; i < m_Items.Count; i++)
               {
                   if (m_Items[i] == sword || m_Items[i]==axe)
@@ -272,13 +267,11 @@ namespace TCGame
             {
                 if (m_Items[i].GetType() == axe.GetType())
                 {
-                    int index = m_Items.IndexOf(m_Items[i]);
-                    m_Items[index] = null;
+                    m_Items.Remove(m_Items[i]);
                 }
                 else if ((m_Items[i].GetType() == sword.GetType()))
                 {
-                    int index = m_Items.IndexOf(m_Items[i]);
-                    m_Items[index] = null;
+                    m_Items.Remove(sword);
                 }
             }
         }
