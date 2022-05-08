@@ -106,7 +106,9 @@ namespace TCGame
                 }
                 else if (_mouseEvent.Button==Mouse.Button.Right)
                 {
-                    NullClickedObjects();
+                   
+                    
+
                 }
             
         }
@@ -229,7 +231,10 @@ namespace TCGame
         {
             m_Items.Clear();
         }
+        private void ClickedBomb()
+        {
 
+        }
         private void NullAllWeapons()
         {
             Weapon sword = new Sword();
@@ -301,41 +306,61 @@ namespace TCGame
 
         private void OrderItems()
         {
-            int Heart, Sword, Axe, Bomb, Coin, Clyde, Blinky;
+             
+             Item heart = new Heart();
+             Item bomb = new Bomb();
+             Item coin = new Coin();
+             Item clyde = new Clyde();
+             Item blinky = new Blinky();
+             Weapon axe = new Axe();
+             Weapon sword = new Sword();
+
+            m_Items.Add(heart);
+            m_Items.Add(axe);
+            m_Items.Add(sword);
+            m_Items.Add(bomb);
+            m_Items.Add(coin);
+            m_Items.Add(blinky);
+            m_Items.Add(clyde);
 
 
 
-            for (int i = 0; i < m_Items.Count; i++)
-            {
-                if (m_Items[i] == new Heart())
-                {
-                    
-                }
-                else if (m_Items[i] == new Sword())
-                {
-
-                }
-                else if(m_Items[i]== new Axe())
-                {
-
-                }
-                else if (m_Items[i] == new Bomb())
-                {
-
-                }
-                else if(m_Items[i]== new Coin())
-                {
-
-                }
-                else if(m_Items[i]== new Clyde())
-                {
-
-                }
-                else
-                {
-
-                }
+            /*for (int i = 0; i < m_Items.Count; i++)
+             {
+                 if (m_Items[i] == heart)
+                 {
+                     
+                 }
+                 else if (m_Items[i] == bomb)
+                 {
+                     Item first=m_Items[i];
+                 }
+                 else if(m_Items[i] == coin)
+                 {
+                     Item fourth;
+                 }
+                 else if (m_Items[i] == clyde)
+                 {
+                     Item fifth;
+                 }
+                 else if(m_Items[i] == blinky)
+                 {
+                     Item sisth;
+                 }
+                 else if(m_Items[i] == axe)
+                 {
+                     Item second;
+                 }
+                 else
+                 {
+                     Item third;
+                 }
+                
             }
+            */
+           
+            
+           
         }
 
         private void ReverseItems()
